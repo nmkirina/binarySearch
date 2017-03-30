@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title></title>
         <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
@@ -15,7 +14,6 @@
                 <form action="generate.php">
                     <button type="submit" class="btn btn-primary btn-large">Сгенерировать</button>
                 </form>
-                
                 <?php if(isset($_SESSION['numArray'])):
                     $numArray = $_SESSION['numArray'];
                     ?>
@@ -37,13 +35,12 @@
                             </tr>
                         </tbody>
                     </table>
-                
-                        <p>
-                            Теперь задайте число и запустите поиск.
-                        </p>
-                        <input type="number" name="number"  value="<?= isset($_SESSION['number']) ? $_SESSION['number'] : 0?>">
-                        <button type="submit" class="btn btn-primary btn-large">Найти</button>
-                    </form>
+                    <p>
+                        Теперь задайте число и запустите поиск.
+                    </p>
+                    <input type="number" name="number"  value="<?= isset($_SESSION['number']) ? $_SESSION['number'] : 0?>">
+                    <button type="submit" class="btn btn-primary btn-large">Найти</button>
+                </form>
                 <?php endif;?>
                 <?php if (isset($_SESSION['index'])):?>
                     <p>
